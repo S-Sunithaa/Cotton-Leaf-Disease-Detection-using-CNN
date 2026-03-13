@@ -1,0 +1,96 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{%block contents%}
+<div class="container">
+		<div class="row">
+				<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-body">
+
+                <h2 style="color:white;">User  Register Form</h2>
+                <p>
+<center>
+               <form action="{%url 'userregister' %}" method="POST" style="width:100%">
+
+                    {% csrf_token %}
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td style="color:white;">Name</td>
+                            <td style="color:black">{{forms.name}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="color:white;">Login ID</td>
+                            <td style="color:black">{{forms.username}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="color:white;">Password</td>
+                            <td style="color:black">{{forms.password}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="color:white;">Mobile</td>
+                            <td style="color:black">{{forms.mobile_no}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="color:white;">email</td>
+                            <td style="color:black">{{forms.email}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="color:white;">Locality</td>
+                            <td style="color:black">{{forms.locality}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="color:white;">Address</td>
+                            <td style="color:black">{{forms.address}}</td>
+                        </tr>                   
+                            <tr>
+                            <td></td>
+                            <td></td>
+                            <td style="color:black">{{forms.status}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button class="btn btn-block btn-primary text-white py-3 px-5"style="margin-center:20%;"
+                                        type="submit">
+                                    Register
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="form-group mt-3">
+                                    <span>&nbsp;</span>
+                                </div>
+                            </td>
+                        </tr>
+
+                        {% if messages %}
+                        {% for message in messages %}
+                        <font color='red'> {{ message }}</font>
+                        {% endfor %}
+                        {% endif %}
+
+                    </table>
+
+                </form>
+</div>
+					</div>
+
+				</div>
+
+			</article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container --
+
+{%endblock%}
