@@ -43,3 +43,7 @@ Sunitha
 
 ## Project Title
 Cotton Leaf Disease Detection using Convolutional Neural Networks (CNN)
+
+## Project Demo Video
+
+[Click here to watch the project demo](OUTPUT/project_output.mp4)
